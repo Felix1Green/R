@@ -31,6 +31,7 @@
 		6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9325BAF866004C2827 /* LessonVideoModel.swift */; };
 		6709DF9925BAFC6B004C2827 /* LessonPageSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */; };
 		6709DFA325BB123C004C2827 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFA225BB123C004C2827 /* Template.storyboard */; };
+		6709DFA825BB14A6004C2827 /* LessonVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DFA725BB14A6004C2827 /* LessonVideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		6709DF9325BAF866004C2827 /* LessonVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoModel.swift; sourceTree = "<group>"; };
 		6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageSingleViewController.swift; sourceTree = "<group>"; };
 		6709DFA225BB123C004C2827 /* Template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
+		6709DFA725BB14A6004C2827 /* LessonVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				6709DF4C25BAEAB6004C2827 /* AppleIDButton.swift */,
 				6709DF4E25BAEAB7004C2827 /* StartPageButton.swift */,
 				6709DF4D25BAEAB6004C2827 /* StartPageCollectionViewCell.swift */,
+				6709DFA725BB14A6004C2827 /* LessonVideoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				6709DF7A25BAF105004C2827 /* LessonPageModuleInteractor.swift in Sources */,
 				6709DEE325BAE2AE004C2827 /* AppDelegate.swift in Sources */,
 				6709DEE525BAE2AE004C2827 /* SceneDelegate.swift in Sources */,
+				6709DFA825BB14A6004C2827 /* LessonVideoView.swift in Sources */,
 				6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */,
 				6709DF4F25BAEAB7004C2827 /* AppleIDButton.swift in Sources */,
 				6709DF8825BAF5D1004C2827 /* LessonsDataSource.swift in Sources */,
