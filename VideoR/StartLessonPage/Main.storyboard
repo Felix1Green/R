@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRC-E1-0ix" customClass="StartPageVideoView" customModule="VideoR" customModuleProvider="target">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRC-E1-0ix" customClass="LessonVideoView" customModule="VideoR" customModuleProvider="target">
                                 <rect key="frame" x="42" y="0.0" width="291" height="517"/>
                                 <color key="backgroundColor" red="0.57986801860000003" green="0.7932735085" blue="0.93727588650000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -49,8 +49,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="helpLabel" destination="6bM-UN-s1w" id="1Zq-mA-Hwf"/>
-                        <outlet property="videoView" destination="xRC-E1-0ix" id="ISv-ZY-mgH"/>
+                        <outlet property="LabelView" destination="6bM-UN-s1w" id="0ZP-1j-2im"/>
+                        <outlet property="VideoView" destination="xRC-E1-0ix" id="nsq-fs-hbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpu-kR-WlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-wu-DzA" customClass="StartPageVideoView" customModule="VideoR" customModuleProvider="target">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-wu-DzA" customClass="LessonVideoView" customModule="VideoR" customModuleProvider="target">
                                 <rect key="frame" x="42" y="0.0" width="291" height="517"/>
                                 <color key="backgroundColor" red="0.57986801860000003" green="0.7932735085" blue="0.93727588650000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -91,18 +91,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="helpLabel" destination="Th7-0h-Adi" id="hv1-KE-df7"/>
-                        <outlet property="videoView" destination="SVb-wu-DzA" id="1UG-XU-57H"/>
+                        <outlet property="LabelView" destination="Th7-0h-Adi" id="wfr-AV-ktA"/>
+                        <outlet property="VideoView" destination="SVb-wu-DzA" id="QIT-kf-opP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkE-7t-GLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452" y="-521.67487684729065"/>
         </scene>
-        <!--Start Page Login Controller-->
+        <!--Lesson Page Auth View Controller-->
         <scene sceneID="81h-kh-6vk">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="GQ3-co-Rcv" customClass="StartPageLoginController" customModule="VideoR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="GQ3-co-Rcv" customClass="LessonPageAuthViewController" customModule="VideoR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5T-a5-3dl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="getStartedBtn" destination="huP-JJ-2Hs" id="3qR-VX-zSW"/>
+                        <outlet property="ContinueWithAppleID" destination="5Ec-CP-Yq1" id="80k-dK-cJs"/>
+                        <outlet property="GetStartedButton" destination="huP-JJ-2Hs" id="xzH-WP-OIM"/>
+                        <outlet property="StartText" destination="Epb-3H-9o6" id="PrY-La-WlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPR-Rd-14c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

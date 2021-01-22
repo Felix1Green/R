@@ -32,20 +32,21 @@ class LessonPageModuleViewController: UIPageViewController {
 }
 
 
-
 extension LessonPageModuleViewController: PresenterToViewLessonPageModuleProtocol{
     
 }
 
 
-
 extension LessonPageModuleViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate
 {
     func InitiateViewController(item: (String, LessonVideoModel)) -> UIViewController?{
-        guard let viewController = storyboard?.instantiateViewController(withIdentifier: item.0) as? LessonPageSingleViewController else{
+        guard let viewController = storyboard?.instantiateViewController(withIdentifier: item.0) else{
             return nil
         }
-        viewController.InitiateView(ParentPageController: self, ViewObject: item.1)
+        if let vc = viewController as? LessonPageSingleViewController{
+            vc.InitiateView(ParentPageController: self, ViewObject: item.1)
+            return vc
+        }
         return viewController
     }
     
