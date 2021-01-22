@@ -22,15 +22,56 @@ class LessonPageModuleViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource = self
+        delegate = self
+        
+        if let vc = self.PageList.first{
+            setViewControllers([vc], direction: .forward, animated: true, completion:nil)
+        }
     }
 }
 
+
+
 extension LessonPageModuleViewController: PresenterToViewLessonPageModuleProtocol{
+    
+}
+
+
+
+extension LessonPageModuleViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate
+{
     func InitiateViewController(item: (String, LessonVideoModel)) -> UIViewController?{
         guard let viewController = storyboard?.instantiateViewController(withIdentifier: item.0) as? LessonPageSingleViewController else{
             return nil
         }
         viewController.InitiateView(ParentPageController: self, ViewObject: item.1)
         return viewController
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let IndexOfViewController = self.PageList.firstIndex(of: viewController) else{
+            return nil
+        }
+        
+        if IndexOfViewController - 1 < 0 || IndexOfViewController - 1 > self.PageList.count{
+            return nil
+        }
+        return self.PageList[IndexOfViewController]
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let indexOfViewController = self.PageList.firstIndex(of: viewController) else{
+            return nil
+        }
+        
+        if indexOfViewController + 1 > self.PageList.count{
+            return nil
+        }
+        return self.PageList[indexOfViewController]
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return self.PageList.count
     }
 }

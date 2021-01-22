@@ -30,6 +30,7 @@
 		6709DF8825BAF5D1004C2827 /* LessonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF8725BAF5D1004C2827 /* LessonsDataSource.swift */; };
 		6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9325BAF866004C2827 /* LessonVideoModel.swift */; };
 		6709DF9925BAFC6B004C2827 /* LessonPageSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */; };
+		6709DFA325BB123C004C2827 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFA225BB123C004C2827 /* Template.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		6709DF8725BAF5D1004C2827 /* LessonsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsDataSource.swift; sourceTree = "<group>"; };
 		6709DF9325BAF866004C2827 /* LessonVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoModel.swift; sourceTree = "<group>"; };
 		6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageSingleViewController.swift; sourceTree = "<group>"; };
+		6709DFA225BB123C004C2827 /* Template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		6709DEE125BAE2AE004C2827 /* VideoR */ = {
 			isa = PBXGroup;
 			children = (
+				6709DFA125BB1214004C2827 /* TemplatesPage */,
 				6709DF5525BAEB93004C2827 /* Views */,
 				6709DF4A25BAE979004C2827 /* StartLessonPage */,
 				6709DF3625BAE5B5004C2827 /* VideoAssets */,
@@ -261,6 +264,14 @@
 			path = PageControllers;
 			sourceTree = "<group>";
 		};
+		6709DFA125BB1214004C2827 /* TemplatesPage */ = {
+			isa = PBXGroup;
+			children = (
+				6709DFA225BB123C004C2827 /* Template.storyboard */,
+			);
+			path = TemplatesPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +377,7 @@
 			files = (
 				6709DEF225BAE2B0004C2827 /* LaunchScreen.storyboard in Resources */,
 				6709DF2925BAE46E004C2827 /* StartPage.storyboard in Resources */,
+				6709DFA325BB123C004C2827 /* Template.storyboard in Resources */,
 				6709DEEF25BAE2B0004C2827 /* Assets.xcassets in Resources */,
 				6709DF2425BAE45E004C2827 /* Template.storyboard in Resources */,
 			);
