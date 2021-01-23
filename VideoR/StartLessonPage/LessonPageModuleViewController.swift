@@ -23,11 +23,11 @@ class LessonPageModuleViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
-        delegate = self
         
         if let vc = self.PageList.first{
             setViewControllers([vc], direction: .forward, animated: true, completion:nil)
         }
+        self.view.backgroundColor = #colorLiteral(red: 0.5154858828, green: 0.8007335067, blue: 0.9525312781, alpha: 1)
     }
 }
 
@@ -37,7 +37,7 @@ extension LessonPageModuleViewController: PresenterToViewLessonPageModuleProtoco
 }
 
 
-extension LessonPageModuleViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate
+extension LessonPageModuleViewController: UIPageViewControllerDataSource
 {
     func InitiateViewController(item: (String, LessonVideoModel)) -> UIViewController?{
         guard let viewController = storyboard?.instantiateViewController(withIdentifier: item.0) else{
@@ -58,7 +58,7 @@ extension LessonPageModuleViewController: UIPageViewControllerDataSource, UIPage
         if IndexOfViewController - 1 < 0 || IndexOfViewController - 1 > self.PageList.count{
             return nil
         }
-        return self.PageList[IndexOfViewController]
+        return self.PageList[IndexOfViewController - 1]
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -66,13 +66,21 @@ extension LessonPageModuleViewController: UIPageViewControllerDataSource, UIPage
             return nil
         }
         
-        if indexOfViewController + 1 > self.PageList.count{
+        if indexOfViewController + 1 >= self.PageList.count{
             return nil
         }
-        return self.PageList[indexOfViewController]
+        return self.PageList[indexOfViewController + 1]
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return self.PageList.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        guard let firstViewController = viewControllers?.first, let firstControllerIndex = PageList.firstIndex(of: firstViewController)
+        else{
+            return 0
+        }
+        return firstControllerIndex
     }
 }
