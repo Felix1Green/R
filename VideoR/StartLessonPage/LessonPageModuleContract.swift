@@ -20,6 +20,8 @@ protocol ViewToPresenterLessonPageModuleProtocol {
     var view: PresenterToViewLessonPageModuleProtocol? { get set }
     var interactor: PresenterToInteractorLessonPageModuleProtocol? { get set }
     var router: PresenterToRouterLessonPageModuleProtocol? { get set }
+    
+    func ControllerLoadingWithViewControllers() ->  Array<(String, LessonVideoModel)>
 }
 
 
@@ -27,6 +29,8 @@ protocol ViewToPresenterLessonPageModuleProtocol {
 protocol PresenterToInteractorLessonPageModuleProtocol {
     
     var presenter: InteractorToPresenterLessonPageModuleProtocol? { get set }
+    
+    func GetLessonPageVideoEntities() -> Array<(String, LessonVideoModel)>
 }
 
 

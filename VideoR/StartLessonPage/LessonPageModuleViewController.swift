@@ -10,7 +10,7 @@ import UIKit
 
 class LessonPageModuleViewController: UIPageViewController {
     private(set) lazy var PageList: [UIViewController] = {
-        let Pages = LessonsDataSource.instance.GetLessonPageViewControllers()
+        let Pages = presenter!.ControllerLoadingWithViewControllers()
         var VCList: [UIViewController] = []
         for item in Pages{
             VCList.append(self.InitiateViewController(item: item)!)
@@ -23,6 +23,7 @@ class LessonPageModuleViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        LessonPageModuleRouter.createModule(viewController: self)
         
         if let vc = self.PageList.first{
             setViewControllers([vc], direction: .forward, animated: true, completion:nil)

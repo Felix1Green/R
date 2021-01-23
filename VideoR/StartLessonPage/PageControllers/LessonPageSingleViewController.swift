@@ -9,8 +9,8 @@ import UIKit
 
 class LessonPageSingleViewController: UIViewController {
     var PageViewController: UIPageViewController?
-    var ViewObject: LessonVideoModel?
-    @IBOutlet weak var VideoView: UIView!
+    var VideoModel: LessonVideoModel?
+    @IBOutlet weak var VideoView: LessonVideoView!
     @IBOutlet weak var LabelView: UILabel!
     
     required init?(coder: NSCoder) {
@@ -19,12 +19,27 @@ class LessonPageSingleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let obj = self.VideoModel else {
+            fatalError("No input video parameters")
+        }
+        let path = Bundle.main.path(forResource: obj.VideoName, ofType: obj.VideoExtension)
+        self.VideoView.InitPlayerWithURL(url: URL(fileURLWithPath: path!))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.VideoView.StartPlaying()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.VideoView.StopPlaying()
     }
 }
 
 extension LessonPageSingleViewController{
     func InitiateView(ParentPageController: UIPageViewController, ViewObject: LessonVideoModel){
         self.PageViewController = ParentPageController
-        self.ViewObject = ViewObject
+        self.VideoModel = ViewObject
     }
 }

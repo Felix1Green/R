@@ -9,39 +9,38 @@ import UIKit
 import AVFoundation
 
 class LessonVideoView: UIView {
-    private var player: AVPlayer!
-    private var playerLayer: AVPlayerLayer!
-    
-    
-    init() {
-        super.init(frame: CGRect.zero)
-        self.initializePlayerLayer()
-        self.autoresizesSubviews = false
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.initializePlayerLayer()
-    }
-    
+    private var player: AVPlayer?
+    private var playerLayer: AVPlayerLayer?
 }
 
 extension LessonVideoView {
-    func initializePlayerLayer(){
+    func InitPlayerWithURL(url: URL){
         playerLayer = AVPlayerLayer()
-        playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.backgroundColor = UIColor.white.cgColor
+        playerLayer!.videoGravity = .resizeAspectFill
+        playerLayer!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2126765839)
+        player = AVPlayer(playerItem: AVPlayerItem(asset: AVAsset(url: url)))
+        playerLayer!.player = player
         
-        self.layer.addSublayer(playerLayer)
-        playerLayer.frame = self.bounds
+        self.layer.addSublayer(playerLayer!)
+        playerLayer?.masksToBounds = true
+        playerLayer?.cornerRadius = 15.0
+        loopVideo(player: player!)
     }
     
-    func playVideoByURL(url: NSURL){
-        player = AVPlayer(url: url as URL)
+    func StartPlaying(){
+        guard player != nil else{
+            fatalError("No initializing player")
+        }
         
-        playerLayer.player = player
+        player!.play()
+    }
+    
+    func StopPlaying(){
+        guard player != nil else{
+            fatalError("No initializing player")
+        }
         
-        loopVideo(player: player)
+        player!.pause()
     }
     
     func loopVideo(player:AVPlayer){
@@ -49,5 +48,11 @@ extension LessonVideoView {
             player.seek(to: .zero)
             player.play()
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.playerLayer?.frame = self.bounds
     }
 }

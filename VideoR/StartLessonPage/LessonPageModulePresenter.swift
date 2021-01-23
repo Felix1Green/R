@@ -9,6 +9,10 @@
 import Foundation
 
 class LessonPageModulePresenter: ViewToPresenterLessonPageModuleProtocol {
+    func ControllerLoadingWithViewControllers() -> Array<(String, LessonVideoModel)> {
+        return interactor!.GetLessonPageVideoEntities()
+    }
+    
 
     // MARK: Properties
     var view: PresenterToViewLessonPageModuleProtocol?
