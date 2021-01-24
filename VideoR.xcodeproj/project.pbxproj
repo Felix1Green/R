@@ -25,7 +25,6 @@
 		6709DF7825BAF105004C2827 /* LessonPageModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF7325BAF105004C2827 /* LessonPageModuleRouter.swift */; };
 		6709DF7925BAF105004C2827 /* LessonPageModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF7425BAF105004C2827 /* LessonPageModuleViewController.swift */; };
 		6709DF7A25BAF105004C2827 /* LessonPageModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF7525BAF105004C2827 /* LessonPageModuleInteractor.swift */; };
-		6709DF8825BAF5D1004C2827 /* LessonsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF8725BAF5D1004C2827 /* LessonsDataSource.swift */; };
 		6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9325BAF866004C2827 /* LessonVideoModel.swift */; };
 		6709DF9925BAFC6B004C2827 /* LessonPageSingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */; };
 		6709DFA325BB123C004C2827 /* Template.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFA225BB123C004C2827 /* Template.storyboard */; };
@@ -36,6 +35,16 @@
 		6709DFF325BC2A2F004C2827 /* Pexels Videos 2795399.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFEF25BC2A2F004C2827 /* Pexels Videos 2795399.mp4 */; };
 		6709DFF425BC2A2F004C2827 /* production ID_4435249.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFF025BC2A2F004C2827 /* production ID_4435249.mp4 */; };
 		6709DFF525BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFF125BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 */; };
+		6709E01525BDB760004C2827 /* TemplatesPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01025BDB760004C2827 /* TemplatesPageContract.swift */; };
+		6709E01625BDB760004C2827 /* TemplatesPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01125BDB760004C2827 /* TemplatesPagePresenter.swift */; };
+		6709E01725BDB760004C2827 /* TemplatesPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01225BDB760004C2827 /* TemplatesPageRouter.swift */; };
+		6709E01825BDB760004C2827 /* TemplatesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01325BDB760004C2827 /* TemplatesPageViewController.swift */; };
+		6709E01925BDB760004C2827 /* TemplatesPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01425BDB760004C2827 /* TemplatesPageInteractor.swift */; };
+		6709E01F25BDB979004C2827 /* TemplateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01E25BDB979004C2827 /* TemplateModels.swift */; };
+		6709E02825BDBB0F004C2827 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E02725BDBB0F004C2827 /* Constants.swift */; };
+		6709E03425BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */; };
+		6709E03A25BDE2A0004C2827 /* LessonPageTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */; };
+		6709E04325BDE40F004C2827 /* LessonPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E04225BDE40F004C2827 /* LessonPageConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +89,6 @@
 		6709DF7325BAF105004C2827 /* LessonPageModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageModuleRouter.swift; sourceTree = "<group>"; };
 		6709DF7425BAF105004C2827 /* LessonPageModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageModuleViewController.swift; sourceTree = "<group>"; };
 		6709DF7525BAF105004C2827 /* LessonPageModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageModuleInteractor.swift; sourceTree = "<group>"; };
-		6709DF8725BAF5D1004C2827 /* LessonsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsDataSource.swift; sourceTree = "<group>"; };
 		6709DF9325BAF866004C2827 /* LessonVideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoModel.swift; sourceTree = "<group>"; };
 		6709DF9825BAFC6B004C2827 /* LessonPageSingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageSingleViewController.swift; sourceTree = "<group>"; };
 		6709DFA225BB123C004C2827 /* Template.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Template.storyboard; sourceTree = "<group>"; };
@@ -91,6 +99,16 @@
 		6709DFEF25BC2A2F004C2827 /* Pexels Videos 2795399.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pexels Videos 2795399.mp4"; path = "../../../templateRenderingProject/templateRenderingProject/Assets/Pexels Videos 2795399.mp4"; sourceTree = "<group>"; };
 		6709DFF025BC2A2F004C2827 /* production ID_4435249.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "production ID_4435249.mp4"; path = "../../../templateRenderingProject/templateRenderingProject/Assets/production ID_4435249.mp4"; sourceTree = "<group>"; };
 		6709DFF125BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = StartPageBackgroundVideo.mp4; path = ../../../templateRenderingProject/templateRenderingProject/Assets/StartPageBackgroundVideo.mp4; sourceTree = "<group>"; };
+		6709E01025BDB760004C2827 /* TemplatesPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageContract.swift; sourceTree = "<group>"; };
+		6709E01125BDB760004C2827 /* TemplatesPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPagePresenter.swift; sourceTree = "<group>"; };
+		6709E01225BDB760004C2827 /* TemplatesPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageRouter.swift; sourceTree = "<group>"; };
+		6709E01325BDB760004C2827 /* TemplatesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageViewController.swift; sourceTree = "<group>"; };
+		6709E01425BDB760004C2827 /* TemplatesPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageInteractor.swift; sourceTree = "<group>"; };
+		6709E01E25BDB979004C2827 /* TemplateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModels.swift; sourceTree = "<group>"; };
+		6709E02725BDBB0F004C2827 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageTransitionController.swift; sourceTree = "<group>"; };
+		6709E04225BDE40F004C2827 /* LessonPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +224,10 @@
 		6709DF4A25BAE979004C2827 /* StartLessonPage */ = {
 			isa = PBXGroup;
 			children = (
+				6709E04125BDE400004C2827 /* Enums */,
+				6709E03825BDE25C004C2827 /* TransitionAnimationController */,
 				6709DF9D25BAFC82004C2827 /* PageControllers */,
 				6709DF8F25BAF84A004C2827 /* LessonPageModels */,
-				6709DF8625BAF52D004C2827 /* LessonPageService */,
 				6709DF2825BAE46E004C2827 /* Main.storyboard */,
 				6709DF4B25BAEA9A004C2827 /* Views */,
 				6709DF7125BAF105004C2827 /* LessonPageModuleContract.swift */,
@@ -238,14 +257,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6709DF8625BAF52D004C2827 /* LessonPageService */ = {
-			isa = PBXGroup;
-			children = (
-				6709DF8725BAF5D1004C2827 /* LessonsDataSource.swift */,
-			);
-			path = LessonPageService;
-			sourceTree = "<group>";
-		};
 		6709DF8F25BAF84A004C2827 /* LessonPageModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +277,15 @@
 		6709DFA125BB1214004C2827 /* TemplatesPage */ = {
 			isa = PBXGroup;
 			children = (
+				6709E02F25BDBBA4004C2827 /* Views */,
+				6709E02625BDBB0A004C2827 /* Enums */,
+				6709E01D25BDB96B004C2827 /* Entities */,
 				6709DFA225BB123C004C2827 /* Template.storyboard */,
+				6709E01025BDB760004C2827 /* TemplatesPageContract.swift */,
+				6709E01125BDB760004C2827 /* TemplatesPagePresenter.swift */,
+				6709E01225BDB760004C2827 /* TemplatesPageRouter.swift */,
+				6709E01325BDB760004C2827 /* TemplatesPageViewController.swift */,
+				6709E01425BDB760004C2827 /* TemplatesPageInteractor.swift */,
 			);
 			path = TemplatesPage;
 			sourceTree = "<group>";
@@ -277,6 +296,46 @@
 				6709DFC525BC1DB6004C2827 /* RenderingEngine.swift */,
 			);
 			path = RenderingEngine;
+			sourceTree = "<group>";
+		};
+		6709E01D25BDB96B004C2827 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6709E01E25BDB979004C2827 /* TemplateModels.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		6709E02625BDBB0A004C2827 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6709E02725BDBB0F004C2827 /* Constants.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		6709E02F25BDBBA4004C2827 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6709E03825BDE25C004C2827 /* TransitionAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */,
+			);
+			path = TransitionAnimationController;
+			sourceTree = "<group>";
+		};
+		6709E04125BDE400004C2827 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6709E04225BDE40F004C2827 /* LessonPageConstants.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,25 +473,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6709E02825BDBB0F004C2827 /* Constants.swift in Sources */,
 				6709DF7925BAF105004C2827 /* LessonPageModuleViewController.swift in Sources */,
 				6709DFBD25BB571D004C2827 /* LessonPageAuthViewController.swift in Sources */,
 				6709DF5125BAEAB7004C2827 /* StartPageButton.swift in Sources */,
 				6709DF7725BAF105004C2827 /* LessonPageModulePresenter.swift in Sources */,
+				6709E01925BDB760004C2827 /* TemplatesPageInteractor.swift in Sources */,
 				6709DF7825BAF105004C2827 /* LessonPageModuleRouter.swift in Sources */,
+				6709E01825BDB760004C2827 /* TemplatesPageViewController.swift in Sources */,
+				6709E03A25BDE2A0004C2827 /* LessonPageTransitionController.swift in Sources */,
 				6709DF7625BAF105004C2827 /* LessonPageModuleContract.swift in Sources */,
 				6709DEED25BAE2AE004C2827 /* VideoR.xcdatamodeld in Sources */,
 				6709DF2F25BAE50F004C2827 /* StartPageAnimator.swift in Sources */,
 				6709DF9925BAFC6B004C2827 /* LessonPageSingleViewController.swift in Sources */,
 				6709DFC625BC1DB6004C2827 /* RenderingEngine.swift in Sources */,
 				6709DF5725BAEBA8004C2827 /* VideoView.swift in Sources */,
+				6709E01625BDB760004C2827 /* TemplatesPagePresenter.swift in Sources */,
 				6709DEE725BAE2AE004C2827 /* ViewController.swift in Sources */,
 				6709DF7A25BAF105004C2827 /* LessonPageModuleInteractor.swift in Sources */,
 				6709DEE325BAE2AE004C2827 /* AppDelegate.swift in Sources */,
 				6709DEE525BAE2AE004C2827 /* SceneDelegate.swift in Sources */,
+				6709E01725BDB760004C2827 /* TemplatesPageRouter.swift in Sources */,
 				6709DFA825BB14A6004C2827 /* LessonVideoView.swift in Sources */,
+				6709E03425BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift in Sources */,
+				6709E01525BDB760004C2827 /* TemplatesPageContract.swift in Sources */,
 				6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */,
 				6709DF4F25BAEAB7004C2827 /* AppleIDButton.swift in Sources */,
-				6709DF8825BAF5D1004C2827 /* LessonsDataSource.swift in Sources */,
+				6709E04325BDE40F004C2827 /* LessonPageConstants.swift in Sources */,
+				6709E01F25BDB979004C2827 /* TemplateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,8 @@ class LessonPageModuleViewController: UIPageViewController {
             setViewControllers([vc], direction: .forward, animated: true, completion:nil)
         }
         self.view.backgroundColor = #colorLiteral(red: 0.5154858828, green: 0.8007335067, blue: 0.9525312781, alpha: 1)
+        
+        transitioningDelegate = self
     }
 }
 
@@ -83,5 +85,12 @@ extension LessonPageModuleViewController: UIPageViewControllerDataSource
             return 0
         }
         return firstControllerIndex
+    }
+}
+
+
+extension LessonPageModuleViewController: UIViewControllerTransitioningDelegate{
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return LessonPageTransitionController()
     }
 }
