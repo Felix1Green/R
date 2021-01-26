@@ -33,7 +33,10 @@ class TemplatesPageViewController: UIViewController {
 }
 
 extension TemplatesPageViewController: PresenterToViewTemplatesPageProtocol{
-
+//    func RenderTemplate(){
+//        let renderEng = RenderAnimation()
+//        renderEng.renderAnimation(screenWidth: .nan, screenHeight: .nan, animationLayer: UIView().layer, audioUrl: , complete: nil)
+//    }
 }
 
 

@@ -91,6 +91,6 @@ extension LessonPageModuleViewController: UIPageViewControllerDataSource
 
 extension LessonPageModuleViewController: UIViewControllerTransitioningDelegate{
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return LessonPageTransitionController()
+        return LessonPageTransitionController(frame: self.view.frame)
     }
 }

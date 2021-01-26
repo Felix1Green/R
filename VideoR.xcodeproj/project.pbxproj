@@ -159,10 +159,10 @@
 		6709DEE125BAE2AE004C2827 /* VideoR */ = {
 			isa = PBXGroup;
 			children = (
-				6709DFC425BC1DA5004C2827 /* RenderingEngine */,
 				6709DFA125BB1214004C2827 /* TemplatesPage */,
-				6709DF5525BAEB93004C2827 /* Views */,
 				6709DF4A25BAE979004C2827 /* StartLessonPage */,
+				6709DFC425BC1DA5004C2827 /* RenderingEngine */,
+				6709DF5525BAEB93004C2827 /* Views */,
 				6709DF3625BAE5B5004C2827 /* VideoAssets */,
 				6709DF2D25BAE504004C2827 /* StartPageTransition */,
 				6709DEF325BAE2B0004C2827 /* Info.plist */,
@@ -224,12 +224,12 @@
 		6709DF4A25BAE979004C2827 /* StartLessonPage */ = {
 			isa = PBXGroup;
 			children = (
-				6709E04125BDE400004C2827 /* Enums */,
-				6709E03825BDE25C004C2827 /* TransitionAnimationController */,
-				6709DF9D25BAFC82004C2827 /* PageControllers */,
-				6709DF8F25BAF84A004C2827 /* LessonPageModels */,
-				6709DF2825BAE46E004C2827 /* Main.storyboard */,
 				6709DF4B25BAEA9A004C2827 /* Views */,
+				6709E04125BDE400004C2827 /* Enums */,
+				6709E03825BDE25C004C2827 /* TransitionAnimation */,
+				6709DF9D25BAFC82004C2827 /* PageControllers */,
+				6709DF8F25BAF84A004C2827 /* Models */,
+				6709DF2825BAE46E004C2827 /* Main.storyboard */,
 				6709DF7125BAF105004C2827 /* LessonPageModuleContract.swift */,
 				6709DF7225BAF105004C2827 /* LessonPageModulePresenter.swift */,
 				6709DF7325BAF105004C2827 /* LessonPageModuleRouter.swift */,
@@ -257,12 +257,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6709DF8F25BAF84A004C2827 /* LessonPageModels */ = {
+		6709DF8F25BAF84A004C2827 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6709DF9325BAF866004C2827 /* LessonVideoModel.swift */,
 			);
-			path = LessonPageModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6709DF9D25BAFC82004C2827 /* PageControllers */ = {
@@ -322,12 +322,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6709E03825BDE25C004C2827 /* TransitionAnimationController */ = {
+		6709E03825BDE25C004C2827 /* TransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */,
 			);
-			path = TransitionAnimationController;
+			path = TransitionAnimation;
 			sourceTree = "<group>";
 		};
 		6709E04125BDE400004C2827 /* Enums */ = {
