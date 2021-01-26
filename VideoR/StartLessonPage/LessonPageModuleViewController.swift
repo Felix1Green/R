@@ -36,7 +36,14 @@ class LessonPageModuleViewController: UIPageViewController {
 
 
 extension LessonPageModuleViewController: PresenterToViewLessonPageModuleProtocol{
-    
+    func TransitionStarted(_ sender: Any){
+        guard let viewControllerToPresent = storyboard?.instantiateViewController(withIdentifier: LessonPageIdentifiers.TemplatePageControllerIdentifier.rawValue)
+        else{
+            fatalError("nothing to present")
+        }
+        viewControllerToPresent.transitioningDelegate = self
+        present(viewControllerToPresent, animated: true, completion: nil)
+    }
 }
 
 
@@ -48,6 +55,9 @@ extension LessonPageModuleViewController: UIPageViewControllerDataSource
         }
         if let vc = viewController as? LessonPageSingleViewController{
             vc.InitiateView(ParentPageController: self, ViewObject: item.1)
+            return vc
+        }else if let vc = viewController as? LessonPageAuthViewController{
+            vc.InitiateView(ParentViewController: self)
             return vc
         }
         return viewController

@@ -134,7 +134,7 @@
                                     <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="76E-QG-rLe" kind="show" identifier="LessonFinishSegue" id="kta-BO-RKP"/>
+                                    <action selector="getStartedButtonPressed:" destination="GQ3-co-Rcv" eventType="touchUpInside" id="BU1-DK-UdP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,10 +168,10 @@
         <!--Template-->
         <scene sceneID="0XW-ft-tSl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGu-Y8-33l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="MainTemplateCollectionPage" storyboardName="Template" id="76E-QG-rLe" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bfm-E6-l91"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HGu-Y8-33l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1251" y="490"/>
         </scene>

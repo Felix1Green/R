@@ -8,7 +8,7 @@
 import UIKit
 
 class LessonPageSingleViewController: UIViewController {
-    var PageViewController: UIPageViewController?
+    weak var PageViewController: UIPageViewController?
     var VideoModel: LessonVideoModel?
     @IBOutlet weak var VideoView: LessonVideoView!
     @IBOutlet weak var LabelView: UILabel!

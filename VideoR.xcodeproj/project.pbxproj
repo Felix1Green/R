@@ -44,7 +44,7 @@
 		6709E02825BDBB0F004C2827 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E02725BDBB0F004C2827 /* Constants.swift */; };
 		6709E03425BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */; };
 		6709E03A25BDE2A0004C2827 /* LessonPageTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */; };
-		6709E04325BDE40F004C2827 /* LessonPageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E04225BDE40F004C2827 /* LessonPageConstants.swift */; };
+		6709E04325BDE40F004C2827 /* LessonPageDoubleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E04225BDE40F004C2827 /* LessonPageDoubleConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +108,7 @@
 		6709E02725BDBB0F004C2827 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageTransitionController.swift; sourceTree = "<group>"; };
-		6709E04225BDE40F004C2827 /* LessonPageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageConstants.swift; sourceTree = "<group>"; };
+		6709E04225BDE40F004C2827 /* LessonPageDoubleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageDoubleConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,7 +333,7 @@
 		6709E04125BDE400004C2827 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				6709E04225BDE40F004C2827 /* LessonPageConstants.swift */,
+				6709E04225BDE40F004C2827 /* LessonPageDoubleConstants.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -499,7 +499,7 @@
 				6709E01525BDB760004C2827 /* TemplatesPageContract.swift in Sources */,
 				6709DF9425BAF866004C2827 /* LessonVideoModel.swift in Sources */,
 				6709DF4F25BAEAB7004C2827 /* AppleIDButton.swift in Sources */,
-				6709E04325BDE40F004C2827 /* LessonPageConstants.swift in Sources */,
+				6709E04325BDE40F004C2827 /* LessonPageDoubleConstants.swift in Sources */,
 				6709E01F25BDB979004C2827 /* TemplateModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

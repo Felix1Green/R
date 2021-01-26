@@ -14,7 +14,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
     
     init(frame: CGRect){
         self.originFrame = frame
-        self.animationDuration = LessonPageConstants.LessonPageFinishTransition.rawValue
+        self.animationDuration = LessonPageDoubleConstants.LessonPageFinishTransition.rawValue
     }
     
     

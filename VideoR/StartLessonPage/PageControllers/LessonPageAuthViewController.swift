@@ -8,6 +8,7 @@
 import UIKit
 
 class LessonPageAuthViewController: UIViewController {
+    weak var PageViewController: LessonPageModuleViewController?
     @IBOutlet var GetStartedButton: UIButton!
     @IBOutlet var StartText: UILabel!
     @IBOutlet var ContinueWithAppleID: UIButton!
@@ -18,9 +19,12 @@ class LessonPageAuthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func getStartedBtnPressed(){
-        
+    func InitiateView(ParentViewController: LessonPageModuleViewController){
+        self.PageViewController = ParentViewController
     }
-
+    
+    @IBAction func getStartedButtonPressed(_ sender: Any) {
+        self.PageViewController?.TransitionStarted(sender)
+    }
+    
 }
