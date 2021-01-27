@@ -14,6 +14,16 @@ class StartPageButton: UIButton {
         customizeView()
     }
     
+    init(frame: CGRect, titleLabelText: NSAttributedString) {
+        super.init(frame: frame)
+        self.setAttributedTitle(titleLabelText, for: .normal)
+        customizeView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         customizeView()

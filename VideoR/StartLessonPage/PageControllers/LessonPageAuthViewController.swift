@@ -29,6 +29,7 @@ class LessonPageAuthViewController: UIViewController {
             fatalError("nothing to present")
         }
         viewControllerToPresent.transitioningDelegate = self
+        viewControllerToPresent.modalPresentationStyle = .fullScreen
         self.present(viewControllerToPresent, animated: true, completion: nil)
     }
     

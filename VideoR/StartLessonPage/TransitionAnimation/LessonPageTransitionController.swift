@@ -36,21 +36,28 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
               let fromVC = pageVC.PageList.last as? LessonPageAuthViewController else{
             return
         }
-        
-        let buttonTransitionView = fromVC.GetStartedButton
-        containerView.addSubview(buttonTransitionView!)
+        let buttonTransitionView = StartPageButton(frame: fromVC.GetStartedButton.frame, titleLabelText: fromVC.GetStartedButton.titleLabel!.attributedText!)
+        buttonTransitionView.center = self.startingPoint
+    
+        containerView.addSubview(buttonTransitionView)
         
         presentedView.center = self.startingPoint
         presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
         presentedView.alpha = 0
         containerView.addSubview(presentedView)
         
+        
+        var titleFrame = buttonTransitionView.titleLabel!.frame
+        titleFrame.origin.y += titleFrame.height*10
+        let titleLabelHideMask = UIView(frame: titleFrame)
+        titleLabelHideMask.backgroundColor = .white
+        titleLabelHideMask.center = self.startingPoint
+        containerView.addSubview(titleLabelHideMask)
         // MARK: Animation
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
             
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
-                titleLabelHideMask.center.y += 5.0
-                fromVC.GetStartedButton.titleLabel?.center.y -= 10.0
+                buttonTransitionView.titleLabel?.center.y += 10.0
                 
             })
             
@@ -64,8 +71,11 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             
             
         }, completion: {_ in
-            toVC.view.isHidden = false
-            snapshot.removeFromSuperview()
+            presentedView.alpha = 1
+            presentedView.transform = CGAffineTransform.identity
+            presentedView.center = viewCenter
+            titleLabelHideMask.removeFromSuperview()
+            buttonTransitionView.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
