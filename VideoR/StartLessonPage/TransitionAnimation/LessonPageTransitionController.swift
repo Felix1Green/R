@@ -31,7 +31,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             return
         }
         let viewCenter = presentedView.center
-        let viewSize = presentedView.frame.size
+//        let viewSize = presentedView.frame.size
         guard let pageVC = transitionContext.viewController(forKey: .from) as? LessonPageModuleViewController,
               let fromVC = pageVC.PageList.last as? LessonPageAuthViewController else{
             return
@@ -47,18 +47,21 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
         containerView.addSubview(presentedView)
         
         
-        var titleFrame = buttonTransitionView.titleLabel!.frame
-        titleFrame.origin.y += titleFrame.height*10
-        let titleLabelHideMask = UIView(frame: titleFrame)
+        let titleFrame = buttonTransitionView.titleLabel!.frame
+        let titleLabelHideMask = UIView(frame: CGRect(x: titleFrame.origin.x, y: titleFrame.origin.y, width: titleFrame.width, height: (buttonTransitionView.frame.height - titleFrame.height)/2))
         titleLabelHideMask.backgroundColor = .white
         titleLabelHideMask.center = self.startingPoint
         containerView.addSubview(titleLabelHideMask)
+        titleLabelHideMask.frame.origin.y += titleFrame.height/2 + titleLabelHideMask.frame.height/2
+        
+        
         // MARK: Animation
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
             
+        
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
-                buttonTransitionView.titleLabel?.center.y += 10.0
-                
+                buttonTransitionView.titleLabel?.center.y += titleFrame.height
+                titleLabelHideMask.frame.size.height = titleFrame.height
             })
             
             UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3, animations: {
