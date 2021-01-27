@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lVV-NC-IXm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -31,36 +31,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="templatePageCell" id="OEB-YL-VJU" customClass="TemplateCollectionViewCell" customModule="VideoR" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="templatePageCell" id="OEB-YL-VJU" customClass="TemplatesPageCollectionViewCell" customModule="VideoR" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XGc-HQ-EZq">
                                             <rect key="frame" x="0.0" y="0.0" width="166" height="280"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZcB-H6-DMt">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBu-BD-Ed6">
                                                     <rect key="frame" x="0.0" y="0.0" width="166" height="280"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qu-7W-pqP">
-                                                    <rect key="frame" x="62" y="128.5" width="42" height="23"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ZcB-H6-DMt" firstAttribute="leading" secondItem="XGc-HQ-EZq" secondAttribute="leading" id="MC6-8x-8yU"/>
-                                                <constraint firstItem="ZcB-H6-DMt" firstAttribute="top" secondItem="XGc-HQ-EZq" secondAttribute="top" id="T5Z-Aq-pqb"/>
-                                                <constraint firstItem="8qu-7W-pqP" firstAttribute="centerY" secondItem="XGc-HQ-EZq" secondAttribute="centerY" id="Veu-Fu-O5Z"/>
-                                                <constraint firstAttribute="bottom" secondItem="ZcB-H6-DMt" secondAttribute="bottom" id="f6U-3c-1Ag"/>
-                                                <constraint firstItem="8qu-7W-pqP" firstAttribute="centerX" secondItem="XGc-HQ-EZq" secondAttribute="centerX" id="fdr-3J-8xO"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZcB-H6-DMt" secondAttribute="trailing" id="hXA-RX-gtL"/>
+                                                <constraint firstAttribute="bottom" secondItem="qBu-BD-Ed6" secondAttribute="bottom" id="4G8-uB-5rq"/>
+                                                <constraint firstItem="qBu-BD-Ed6" firstAttribute="leading" secondItem="XGc-HQ-EZq" secondAttribute="leading" id="Ewa-yM-xhp"/>
+                                                <constraint firstAttribute="trailing" secondItem="qBu-BD-Ed6" secondAttribute="trailing" id="ilV-SW-uwr"/>
+                                                <constraint firstItem="qBu-BD-Ed6" firstAttribute="top" secondItem="XGc-HQ-EZq" secondAttribute="top" id="o8C-4k-jo9"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="166" height="280"/>
                                         <connections>
-                                            <outlet property="imageView" destination="ZcB-H6-DMt" id="5PS-wg-dTq"/>
-                                            <outlet property="titleLabel" destination="8qu-7W-pqP" id="vlG-pU-L7o"/>
+                                            <outlet property="TemplatePreview" destination="qBu-BD-Ed6" id="hhw-RC-kJa"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -94,9 +86,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="0mm-kn-G2N"/>
                     <connections>
-                        <outlet property="collectionView" destination="C5h-Yu-pyx" id="akY-VC-xQl"/>
-                        <outlet property="searchBar" destination="flm-10-OMa" id="iLg-Qp-bcy"/>
-                        <outlet property="tabBar" destination="7Zi-q3-JNa" id="gpG-m5-3Eb"/>
+                        <outlet property="TemplateCollectionView" destination="C5h-Yu-pyx" id="I9K-5q-wE5"/>
+                        <outlet property="TemplateSearchBar" destination="flm-10-OMa" id="TEI-CU-RMp"/>
+                        <outlet property="TemplateTabBar" destination="7Zi-q3-JNa" id="qgG-CK-L7e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzF-Fr-uOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

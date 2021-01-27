@@ -12,19 +12,15 @@ import UIKit
 class LessonPageModuleRouter: PresenterToRouterLessonPageModuleProtocol {
     
     // MARK: Static methods
-    static func createModule() -> UIViewController {
-        
-        let viewController = LessonPageModuleViewController()
+    static func createModule(viewController: LessonPageModuleViewController) {
         
         let presenter: ViewToPresenterLessonPageModuleProtocol & InteractorToPresenterLessonPageModuleProtocol = LessonPageModulePresenter()
         
         viewController.presenter = presenter
         viewController.presenter?.router = LessonPageModuleRouter()
         viewController.presenter?.view = viewController
-        viewController.presenter?.interactor = LessonPageModuleInteractor()
+        viewController.presenter?.interactor = LessonPageModuleInteractor.instance
         viewController.presenter?.interactor?.presenter = presenter
-        
-        return viewController
     }
     
 }
