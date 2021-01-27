@@ -31,7 +31,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             return
         }
         let viewCenter = presentedView.center
-//        let viewSize = presentedView.frame.size
+        let viewSize = presentedView.frame.size
         guard let pageVC = transitionContext.viewController(forKey: .from) as? LessonPageModuleViewController,
               let fromVC = pageVC.PageList.last as? LessonPageAuthViewController else{
             return
@@ -65,7 +65,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             })
             
             UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3, animations: {
-                
+                buttonTransitionView.frame.size = viewSize
             })
             
             UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3, animations: {
