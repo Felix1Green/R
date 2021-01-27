@@ -16,7 +16,6 @@
 		6709DEFD25BAE2B0004C2827 /* VideoRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DEFC25BAE2B0004C2827 /* VideoRTests.swift */; };
 		6709DF0825BAE2B0004C2827 /* VideoRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF0725BAE2B0004C2827 /* VideoRUITests.swift */; };
 		6709DF2925BAE46E004C2827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6709DF2825BAE46E004C2827 /* Main.storyboard */; };
-		6709DF2F25BAE50F004C2827 /* StartPageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF2E25BAE50F004C2827 /* StartPageAnimator.swift */; };
 		6709DF4F25BAEAB7004C2827 /* AppleIDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF4C25BAEAB6004C2827 /* AppleIDButton.swift */; };
 		6709DF5125BAEAB7004C2827 /* StartPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF4E25BAEAB7004C2827 /* StartPageButton.swift */; };
 		6709DF5725BAEBA8004C2827 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DF5625BAEBA8004C2827 /* VideoView.swift */; };
@@ -80,7 +79,6 @@
 		6709DF0725BAE2B0004C2827 /* VideoRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRUITests.swift; sourceTree = "<group>"; };
 		6709DF0925BAE2B0004C2827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6709DF2825BAE46E004C2827 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6709DF2E25BAE50F004C2827 /* StartPageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageAnimator.swift; sourceTree = "<group>"; };
 		6709DF4C25BAEAB6004C2827 /* AppleIDButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleIDButton.swift; sourceTree = "<group>"; };
 		6709DF4E25BAEAB7004C2827 /* StartPageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageButton.swift; sourceTree = "<group>"; };
 		6709DF5625BAEBA8004C2827 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				6709DFC425BC1DA5004C2827 /* RenderingEngine */,
 				6709DF5525BAEB93004C2827 /* Views */,
 				6709DF3625BAE5B5004C2827 /* VideoAssets */,
-				6709DF2D25BAE504004C2827 /* StartPageTransition */,
 				6709DEF325BAE2B0004C2827 /* Info.plist */,
 				6709DF1825BAE2CA004C2827 /* Resource */,
 				6709DEE625BAE2AE004C2827 /* ViewController.swift */,
@@ -200,14 +197,6 @@
 				6709DEF025BAE2B0004C2827 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		6709DF2D25BAE504004C2827 /* StartPageTransition */ = {
-			isa = PBXGroup;
-			children = (
-				6709DF2E25BAE50F004C2827 /* StartPageAnimator.swift */,
-			);
-			path = StartPageTransition;
 			sourceTree = "<group>";
 		};
 		6709DF3625BAE5B5004C2827 /* VideoAssets */ = {
@@ -484,7 +473,6 @@
 				6709E03A25BDE2A0004C2827 /* LessonPageTransitionController.swift in Sources */,
 				6709DF7625BAF105004C2827 /* LessonPageModuleContract.swift in Sources */,
 				6709DEED25BAE2AE004C2827 /* VideoR.xcdatamodeld in Sources */,
-				6709DF2F25BAE50F004C2827 /* StartPageAnimator.swift in Sources */,
 				6709DF9925BAFC6B004C2827 /* LessonPageSingleViewController.swift in Sources */,
 				6709DFC625BC1DB6004C2827 /* RenderingEngine.swift in Sources */,
 				6709DF5725BAEBA8004C2827 /* VideoView.swift in Sources */,

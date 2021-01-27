@@ -9,7 +9,7 @@ import Foundation
 
 
 enum LessonPageDoubleConstants: Double{
-    case LessonPageFinishTransition = 1.0
+    case LessonPageFinishTransition = 5.0
 }
 
 

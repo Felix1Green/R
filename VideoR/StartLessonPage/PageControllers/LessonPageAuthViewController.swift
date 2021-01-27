@@ -24,7 +24,19 @@ class LessonPageAuthViewController: UIViewController {
     }
     
     @IBAction func getStartedButtonPressed(_ sender: Any) {
-        self.PageViewController?.TransitionStarted(sender)
+        guard let viewControllerToPresent = storyboard?.instantiateViewController(withIdentifier: LessonPageIdentifiers.TemplatePageControllerIdentifier.rawValue)
+        else{
+            fatalError("nothing to present")
+        }
+        viewControllerToPresent.transitioningDelegate = self
+        self.present(viewControllerToPresent, animated: true, completion: nil)
     }
     
+}
+
+
+extension LessonPageAuthViewController: UIViewControllerTransitioningDelegate{
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return LessonPageTransitionController(frame: self.view.frame, startingPoint: self.GetStartedButton.center)
+    }
 }

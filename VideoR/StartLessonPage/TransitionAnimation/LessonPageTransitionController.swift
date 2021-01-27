@@ -11,10 +11,12 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
     
     private var originFrame: CGRect
     private var animationDuration: TimeInterval
+    var startingPoint = CGPoint.zero
     
-    init(frame: CGRect){
+    init(frame: CGRect, startingPoint: CGPoint){
         self.originFrame = frame
         self.animationDuration = LessonPageDoubleConstants.LessonPageFinishTransition.rawValue
+        self.startingPoint = startingPoint
     }
     
     
@@ -23,28 +25,54 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from) as?
-              LessonPageAuthViewController,
-              let toVC = transitionContext.viewController(forKey: .to),
-              let snapshot = toVC.view.snapshotView(afterScreenUpdates: true)
-        else{
+//        guard let pageVC = transitionContext.viewController(forKey: .from) as?
+//              LessonPageModuleViewController,
+//              let toVC = transitionContext.viewController(forKey: .to),
+//              let fromVC = pageVC.PageList.last as? LessonPageAuthViewController,
+//              let snapshot = pageVC.view.snapshotView(afterScreenUpdates: true)
+//        else{
+//            return
+//        }
+//        let containerView = transitionContext.containerView
+//        _ = transitionContext.finalFrame(for: toVC)
+//        snapshot.frame = originFrame
+//
+//        // MARK: Setting params for containerView
+//        containerView.addSubview(toVC.view)
+//        containerView.addSubview(snapshot)
+//        toVC.view.isHidden = true
+//
+//        // MARK: Transition view
+//
+//        // MARK: Subviews for animation
+//        let titleLabelHideMask = UIView(frame: fromVC.GetStartedButton.frame)
+//        titleLabelHideMask.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//        containerView.addSubview(titleLabelHideMask)
+        
+        let containerView = transitionContext.containerView
+        guard let presentedView = transitionContext.view(forKey: .to) else{
+            return
+        }
+        let viewCenter = presentedView.center
+        let viewSize = presentedView.frame.size
+        guard let pageVC = transitionContext.viewController(forKey: .from) as? LessonPageModuleViewController,
+              let fromVC = pageVC.PageList.last as? LessonPageAuthViewController else{
             return
         }
         
-        let containerView = transitionContext.containerView
-        let finalFrame = transitionContext.finalFrame(for: toVC)
-        snapshot.frame = originFrame
+        let buttonTransitionView = fromVC.GetStartedButton
+        containerView.addSubview(buttonTransitionView!)
         
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(snapshot)
-        toVC.view.isHidden = true
-        let titleLabelHideMask = UIView(frame: fromVC.GetStartedButton.frame)
-        containerView.addSubview(titleLabelHideMask)
+        presentedView.center = self.startingPoint
+        presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        presentedView.alpha = 0
+        containerView.addSubview(presentedView)
         
+        // MARK: Animation
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
             
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
-                titleLabelHideMask.center.y -= 5.0
+                titleLabelHideMask.center.y += 5.0
                 fromVC.GetStartedButton.titleLabel?.center.y -= 10.0
                 
             })
