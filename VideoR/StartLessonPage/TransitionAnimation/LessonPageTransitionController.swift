@@ -25,29 +25,6 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-//        guard let pageVC = transitionContext.viewController(forKey: .from) as?
-//              LessonPageModuleViewController,
-//              let toVC = transitionContext.viewController(forKey: .to),
-//              let fromVC = pageVC.PageList.last as? LessonPageAuthViewController,
-//              let snapshot = pageVC.view.snapshotView(afterScreenUpdates: true)
-//        else{
-//            return
-//        }
-//        let containerView = transitionContext.containerView
-//        _ = transitionContext.finalFrame(for: toVC)
-//        snapshot.frame = originFrame
-//
-//        // MARK: Setting params for containerView
-//        containerView.addSubview(toVC.view)
-//        containerView.addSubview(snapshot)
-//        toVC.view.isHidden = true
-//
-//        // MARK: Transition view
-//
-//        // MARK: Subviews for animation
-//        let titleLabelHideMask = UIView(frame: fromVC.GetStartedButton.frame)
-//        titleLabelHideMask.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//        containerView.addSubview(titleLabelHideMask)
         
         let containerView = transitionContext.containerView
         guard let presentedView = transitionContext.view(forKey: .to) else{
