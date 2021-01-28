@@ -59,13 +59,13 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
             
         
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2/3, animations: {
                 buttonTransitionView.titleLabel?.center.y += titleFrame.height
                 titleLabelHideMask.frame.size.height = titleFrame.height
             })
             
-            UIView.addKeyframe(withRelativeStartTime: 1/3, relativeDuration: 1/3, animations: {
-                buttonTransitionView.frame.size = viewSize
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/3, animations: {
+                buttonTransitionView.transform = CGAffineTransform(scaleX: 50, y: 50)
             })
             
             UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3, animations: {
