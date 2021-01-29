@@ -14,7 +14,7 @@ class StartPageButton: UIButton {
         customizeView()
     }
     
-    init(frame: CGRect, titleLabelText: NSAttributedString) {
+    init(frame: CGRect, titleLabelText: NSAttributedString?) {
         super.init(frame: frame)
         self.setAttributedTitle(titleLabelText, for: .normal)
         customizeView()
