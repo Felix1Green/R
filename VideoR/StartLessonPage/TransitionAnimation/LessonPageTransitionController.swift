@@ -49,8 +49,8 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
         containerView.addSubview(buttonLabelView)
         
         
-        presentedView.center = self.startingPoint
-        presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+        presentedView.center = viewCenter
+//        presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
         presentedView.alpha = 0
         containerView.addSubview(presentedView)
         
@@ -65,7 +65,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
         
         // MARK: Animation
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
-            
+
         
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
                 buttonLabelView.titleLabel?.center.y += titleFrame.height
@@ -77,18 +77,23 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
                 buttonTransitionView.center = self.startingPoint
             })
             
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 3/3, animations: {
-                buttonTransitionView.transform = CGAffineTransform.init(scaleX: 8.0, y: 15.0)
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: {
+                buttonTransitionView.transform = CGAffineTransform.init(scaleX: 7.0, y: 12.0)
             })
             
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 3/3, animations: {
-                buttonTransitionView.layer.cornerRadius = 250.0
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: {
+                buttonTransitionView.layer.cornerRadius = 200.0
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3, animations: {
+                presentedView.alpha = 1
+//                presentedView.transform = CGAffineTransform.identity
             })
             
             
         }, completion: {_ in
             presentedView.alpha = 1
-            presentedView.transform = CGAffineTransform.identity
+//            presentedView.transform = CGAffineTransform.identity
             presentedView.center = viewCenter
             titleLabelHideMask.removeFromSuperview()
             buttonLabelView.removeFromSuperview()
