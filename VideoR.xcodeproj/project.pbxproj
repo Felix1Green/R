@@ -30,10 +30,6 @@
 		6709DFA825BB14A6004C2827 /* LessonVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DFA725BB14A6004C2827 /* LessonVideoView.swift */; };
 		6709DFBD25BB571D004C2827 /* LessonPageAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DFBC25BB571D004C2827 /* LessonPageAuthViewController.swift */; };
 		6709DFC625BC1DB6004C2827 /* RenderingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709DFC525BC1DB6004C2827 /* RenderingEngine.swift */; };
-		6709DFF225BC2A2F004C2827 /* SampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFEE25BC2A2F004C2827 /* SampleVideo.mp4 */; };
-		6709DFF325BC2A2F004C2827 /* Pexels Videos 2795399.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFEF25BC2A2F004C2827 /* Pexels Videos 2795399.mp4 */; };
-		6709DFF425BC2A2F004C2827 /* production ID_4435249.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFF025BC2A2F004C2827 /* production ID_4435249.mp4 */; };
-		6709DFF525BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6709DFF125BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 */; };
 		6709E01525BDB760004C2827 /* TemplatesPageContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01025BDB760004C2827 /* TemplatesPageContract.swift */; };
 		6709E01625BDB760004C2827 /* TemplatesPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01125BDB760004C2827 /* TemplatesPagePresenter.swift */; };
 		6709E01725BDB760004C2827 /* TemplatesPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E01225BDB760004C2827 /* TemplatesPageRouter.swift */; };
@@ -44,6 +40,10 @@
 		6709E03425BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */; };
 		6709E03A25BDE2A0004C2827 /* LessonPageTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */; };
 		6709E04325BDE40F004C2827 /* LessonPageDoubleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6709E04225BDE40F004C2827 /* LessonPageDoubleConstants.swift */; };
+		9C40AB3125C56F7F0066EA31 /* SampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C40AB2D25C56F7F0066EA31 /* SampleVideo.mp4 */; };
+		9C40AB3225C56F7F0066EA31 /* Pexels Videos 2795399.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C40AB2E25C56F7F0066EA31 /* Pexels Videos 2795399.mp4 */; };
+		9C40AB3325C56F7F0066EA31 /* StartPageBackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C40AB2F25C56F7F0066EA31 /* StartPageBackgroundVideo.mp4 */; };
+		9C40AB3425C56F7F0066EA31 /* production ID_4435249.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9C40AB3025C56F7F0066EA31 /* production ID_4435249.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +93,6 @@
 		6709DFA725BB14A6004C2827 /* LessonVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoView.swift; sourceTree = "<group>"; };
 		6709DFBC25BB571D004C2827 /* LessonPageAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageAuthViewController.swift; sourceTree = "<group>"; };
 		6709DFC525BC1DB6004C2827 /* RenderingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingEngine.swift; sourceTree = "<group>"; };
-		6709DFEE25BC2A2F004C2827 /* SampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SampleVideo.mp4; path = ../../../templateRenderingProject/templateRenderingProject/Assets/SampleVideo.mp4; sourceTree = "<group>"; };
-		6709DFEF25BC2A2F004C2827 /* Pexels Videos 2795399.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pexels Videos 2795399.mp4"; path = "../../../templateRenderingProject/templateRenderingProject/Assets/Pexels Videos 2795399.mp4"; sourceTree = "<group>"; };
-		6709DFF025BC2A2F004C2827 /* production ID_4435249.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "production ID_4435249.mp4"; path = "../../../templateRenderingProject/templateRenderingProject/Assets/production ID_4435249.mp4"; sourceTree = "<group>"; };
-		6709DFF125BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = StartPageBackgroundVideo.mp4; path = ../../../templateRenderingProject/templateRenderingProject/Assets/StartPageBackgroundVideo.mp4; sourceTree = "<group>"; };
 		6709E01025BDB760004C2827 /* TemplatesPageContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageContract.swift; sourceTree = "<group>"; };
 		6709E01125BDB760004C2827 /* TemplatesPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPagePresenter.swift; sourceTree = "<group>"; };
 		6709E01225BDB760004C2827 /* TemplatesPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageRouter.swift; sourceTree = "<group>"; };
@@ -107,6 +103,10 @@
 		6709E03325BDBC3A004C2827 /* TemplatesPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplatesPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		6709E03925BDE2A0004C2827 /* LessonPageTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageTransitionController.swift; sourceTree = "<group>"; };
 		6709E04225BDE40F004C2827 /* LessonPageDoubleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPageDoubleConstants.swift; sourceTree = "<group>"; };
+		9C40AB2D25C56F7F0066EA31 /* SampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo.mp4; sourceTree = "<group>"; };
+		9C40AB2E25C56F7F0066EA31 /* Pexels Videos 2795399.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pexels Videos 2795399.mp4"; sourceTree = "<group>"; };
+		9C40AB2F25C56F7F0066EA31 /* StartPageBackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = StartPageBackgroundVideo.mp4; sourceTree = "<group>"; };
+		9C40AB3025C56F7F0066EA31 /* production ID_4435249.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "production ID_4435249.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,10 +202,10 @@
 		6709DF3625BAE5B5004C2827 /* VideoAssets */ = {
 			isa = PBXGroup;
 			children = (
-				6709DFEF25BC2A2F004C2827 /* Pexels Videos 2795399.mp4 */,
-				6709DFF025BC2A2F004C2827 /* production ID_4435249.mp4 */,
-				6709DFEE25BC2A2F004C2827 /* SampleVideo.mp4 */,
-				6709DFF125BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 */,
+				9C40AB2E25C56F7F0066EA31 /* Pexels Videos 2795399.mp4 */,
+				9C40AB3025C56F7F0066EA31 /* production ID_4435249.mp4 */,
+				9C40AB2D25C56F7F0066EA31 /* SampleVideo.mp4 */,
+				9C40AB2F25C56F7F0066EA31 /* StartPageBackgroundVideo.mp4 */,
 			);
 			path = VideoAssets;
 			sourceTree = "<group>";
@@ -430,13 +430,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C40AB3325C56F7F0066EA31 /* StartPageBackgroundVideo.mp4 in Resources */,
 				6709DEF225BAE2B0004C2827 /* LaunchScreen.storyboard in Resources */,
-				6709DFF325BC2A2F004C2827 /* Pexels Videos 2795399.mp4 in Resources */,
+				9C40AB3425C56F7F0066EA31 /* production ID_4435249.mp4 in Resources */,
+				9C40AB3225C56F7F0066EA31 /* Pexels Videos 2795399.mp4 in Resources */,
 				6709DF2925BAE46E004C2827 /* Main.storyboard in Resources */,
-				6709DFF425BC2A2F004C2827 /* production ID_4435249.mp4 in Resources */,
 				6709DFA325BB123C004C2827 /* Template.storyboard in Resources */,
-				6709DFF525BC2A2F004C2827 /* StartPageBackgroundVideo.mp4 in Resources */,
-				6709DFF225BC2A2F004C2827 /* SampleVideo.mp4 in Resources */,
+				9C40AB3125C56F7F0066EA31 /* SampleVideo.mp4 in Resources */,
 				6709DEEF25BAE2B0004C2827 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

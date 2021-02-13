@@ -14,7 +14,16 @@ class LessonVideoView: UIView {
 }
 
 extension LessonVideoView {
+    func initCustomView(){
+        self.layer.cornerRadius = 15.0
+        layer.borderWidth = 1.5
+        layer.borderColor = UIColor.white.cgColor
+    }
     func InitPlayerWithURL(url: URL){
+        //view
+        self.initCustomView()
+        
+        // MARK: player
         playerLayer = AVPlayerLayer()
         playerLayer!.videoGravity = .resizeAspectFill
         playerLayer!.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2126765839)
@@ -23,7 +32,7 @@ extension LessonVideoView {
         
         self.layer.addSublayer(playerLayer!)
         playerLayer?.masksToBounds = true
-        playerLayer?.cornerRadius = 15.0
+        playerLayer?.cornerRadius = self.layer.cornerRadius
         loopVideo(player: player!)
     }
     
