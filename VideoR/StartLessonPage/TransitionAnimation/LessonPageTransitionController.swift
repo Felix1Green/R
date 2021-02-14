@@ -36,6 +36,7 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
               let fromVC = pageVC.PageList.last as? LessonPageAuthViewController else{
             return
         }
+        debugPrint(viewSize)
         
         
         // MARK: button transition view
@@ -65,11 +66,14 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
         
         // MARK: Animation
         UIView.animateKeyframes(withDuration: self.animationDuration, delay: 0.0, options: .beginFromCurrentState, animations: {
-
-        
+            
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1/3, animations: {
                 buttonLabelView.titleLabel?.center.y += titleFrame.height
                 titleLabelHideMask.frame.size.height = titleFrame.height
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1/3*self.animationDuration, execute: {
+                buttonLabelView.removeFromSuperview()
+                titleLabelHideMask.removeFromSuperview()
             })
             
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1/3, animations: {
@@ -78,16 +82,15 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             })
             
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: {
-                buttonTransitionView.transform = CGAffineTransform.init(scaleX: 7.0, y: 12.0)
+                buttonTransitionView.transform = CGAffineTransform.init(scaleX: 10.0, y: 25.0)
             })
             
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2/3, animations: {
-                buttonTransitionView.layer.cornerRadius = 200.0
+                buttonTransitionView.layer.cornerRadius = viewSize.height/3.5
             })
             
             UIView.addKeyframe(withRelativeStartTime: 2/3, relativeDuration: 1/3, animations: {
                 presentedView.alpha = 1
-//                presentedView.transform = CGAffineTransform.identity
             })
             
             
@@ -95,8 +98,6 @@ class LessonPageTransitionController: NSObject, UIViewControllerAnimatedTransiti
             presentedView.alpha = 1
 //            presentedView.transform = CGAffineTransform.identity
             presentedView.center = viewCenter
-            titleLabelHideMask.removeFromSuperview()
-            buttonLabelView.removeFromSuperview()
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
